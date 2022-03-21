@@ -1,0 +1,23 @@
+[alias]
+  co = checkout
+  tree = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)' --all
+  treec = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'
+
+[user]
+  name = Alessandro Tilli
+  email = alessandro.tilli@gmail.com
+
+[core]
+  excludesfile = /Users/ale/.gitignore_global
+
+[pull]
+  ff = only
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[init]
+  defaultBranch = main
