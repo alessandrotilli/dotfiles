@@ -56,8 +56,8 @@ uninstall () {
 }
 
 cd "$source"
-files=`find * -type f ! -name 'do.sh' ! -name '.gitignore' ! -path 'backup/*' ! -path '.git/*' -a -print`
 
+files=`find . -type f ! -name 'do.sh' ! -name '.gitignore' ! -path './backup/*' ! -path './.git/*' -a -print`
 case $1 in
     install)
         install $files
