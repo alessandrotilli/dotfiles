@@ -41,34 +41,35 @@ let g:ale_disable_lsp = 1
 " Fzf
 set rtp+=/usr/local/opt/fzf
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Install vim-plug if not found
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'dyng/ctrlsf.vim'
-Plugin 'junegunn/fzf.vim'
-Plugin 'dense-analysis/ale'
-Plugin 'djoshea/vim-autoread'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'chriskempson/base16-vim'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-fugitive'
-Plugin 'groenewege/vim-less'
-Plugin 'ap/vim-css-color'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'neoclide/coc.nvim', {'branch': 'master'}
+call plug#begin('~/.vim/plugged')
+Plug 'dyng/ctrlsf.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'dense-analysis/ale'
+Plug 'djoshea/vim-autoread'
+Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-fugitive'
+Plug 'groenewege/vim-less'
+Plug 'ap/vim-css-color'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'neoclide/coc.nvim', {'branch': 'master'}
 
 " ---------- LSP ----------
-" Plugin 'neovim/nvim-lspconfig'
-" Plugin 'jose-elias-alvarez/null-ls.nvim'
-" Plugin 'jose-elias-alvarez/nvim-lsp-ts-utils'
-" Plugin 'nvim-lua/plenary.nvim'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'jose-elias-alvarez/null-ls.nvim'
+" Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
+" Plug 'nvim-lua/plenary.nvim'
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
