@@ -61,7 +61,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'jeetsukumaran/vim-buffergator'
-Plug 'neoclide/coc.nvim', {'branch': 'master'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ---------- LSP ----------
 " Plug 'neovim/nvim-lspconfig'
