@@ -61,6 +61,7 @@ Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'digitaltoad/vim-pug'
 
 " ---- colorscheme --------
 Plug 'tomasiser/vim-code-dark'
@@ -124,7 +125,6 @@ function! LinterStatus() abort
 endfunction
 " edit and use this function to customize status bar
 " <<<<< LINTER
-
 " set statusline+=%{LinterStatus()}%{coc#status()}%{get(b:,'coc_current_function','')}
 
 let g:buffergator_viewport_split_policy = "B"
