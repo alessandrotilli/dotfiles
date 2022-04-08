@@ -31,7 +31,6 @@ set shortmess=aFc
 " netrw settings
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-" let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 20
 
@@ -63,24 +62,26 @@ Plug 'ap/vim-css-color'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" ---- colorscheme --------
+Plug 'tomasiser/vim-code-dark'
+Plug 'danilo-augusto/vim-afterglow'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
+
 " ---------- LSP ----------
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'jose-elias-alvarez/null-ls.nvim'
 " Plug 'jose-elias-alvarez/nvim-lsp-ts-utils'
 " Plug 'nvim-lua/plenary.nvim'
-" All of your Plugins must be added before the following line
 call plug#end()
 
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 " Color scheme
-let base16colorspace=256
-if filereadable(expand("~/.vimrc_background"))
-  source ~/.vimrc_background
-endif
-
-" colorscheme base16-default-dark
+" set background=dark
+colorscheme codedark
+" colorscheme afterglow
+" colorscheme onehalfdark
 
 " >>>>> SHORTCUTS
 nnoremap <silent> <C-p> :GFiles<CR>
