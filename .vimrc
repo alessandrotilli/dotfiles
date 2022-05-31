@@ -86,7 +86,7 @@ colorscheme codedark
 
 " >>>>> SHORTCUTS
 nnoremap <silent> <C-p> :GFiles<CR>
-nnoremap <silent> <C-o> :Files<CR>
+nnoremap <silent> <leader>p :Files<CR>
 nnoremap <silent> <C-C>c :bp<CR>:bd # <CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
