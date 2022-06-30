@@ -4,8 +4,21 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # git bash-completion (need to test on linux)
 # [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
+# git bash-completion brew
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  source $(brew --prefix)/etc/bash_completion
+fi
+
+# gitprompt brew
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
+
 # gitprompt
-[ -r "$HOME/.bash-git-prompt/gitprompt.sh" ] && source "$HOME/.bash-git-prompt/gitprompt.sh"
+if [ -r "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+  source "$HOME/.bash-git-prompt/gitprompt.sh"
+fi
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -32,4 +45,4 @@ export EDITOR=nvim
 # FZF
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-[ -r ~/.bashrc ] && source ~/.bashrc
+[ -f ~/.bashrc ] && source ~/.bashrc
