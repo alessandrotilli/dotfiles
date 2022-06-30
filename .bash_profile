@@ -1,5 +1,8 @@
-# git bash-completion
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+# suppress macos message "The default interactive shell is now zsh"
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# git bash-completion (need to test on linux)
+# [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 # gitprompt
 [ -r "$HOME/.bash-git-prompt/gitprompt.sh" ] && source "$HOME/.bash-git-prompt/gitprompt.sh"
