@@ -1,0 +1,8 @@
+{
+    "gitlens.codeLens.enabled": false,
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.minimap.enabled": false
+}
