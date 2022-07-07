@@ -12,6 +12,9 @@ set smartcase
 set number relativenumber
 set clipboard+=unnamedplus
 set updatetime=100
+" more natural splits
+set splitbelow
+set splitright
 
 syntax on
 set hidden
@@ -87,9 +90,12 @@ colorscheme codedark
 " >>>>> SHORTCUTS
 nnoremap <silent> <C-p> :GFiles<CR>
 nnoremap <silent> <leader>p :Files<CR>
+
 nnoremap <silent> <C-C>c :bp<CR>:bd # <CR>
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
+nnoremap <leader><Tab> <C-W><C-W>
+
 nmap     <C-F>f <Plug>CtrlSFPrompt
 vmap     <C-F>f <Plug>CtrlSFVwordPath
 vmap     <C-F>F <Plug>CtrlSFVwordExec
