@@ -65,6 +65,9 @@ Plug 'ap/vim-css-color'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'digitaltoad/vim-pug'
+Plug 'andymass/vim-matchup'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 " ---- colorscheme --------
 Plug 'tomasiser/vim-code-dark'
