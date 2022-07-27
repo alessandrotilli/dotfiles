@@ -58,7 +58,6 @@ Plug 'djoshea/vim-autoread'
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-Plug 'ervandew/supertab'
 Plug 'tpope/vim-fugitive'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
@@ -68,6 +67,7 @@ Plug 'digitaltoad/vim-pug'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
 
 " ---- colorscheme --------
 Plug 'tomasiser/vim-code-dark'
@@ -93,6 +93,7 @@ colorscheme codedark
 " >>>>> SHORTCUTS
 nnoremap <silent> <C-p> :GFiles<CR>
 nnoremap <silent> <leader>p :Files<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
 
 nnoremap <silent> <C-C>c :bp<CR>:bd # <CR>
 nnoremap <Tab> :bnext<CR>
@@ -150,3 +151,5 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 let $FZF_DEFAULT_COMMAND='rg --files'
+
+let g:matchup_surround_enabled = 1
