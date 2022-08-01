@@ -26,6 +26,8 @@ set listchars=tab:꜔-,trail:·,nbsp:⎵
 set cmdheight=2
 set shortmess=aFc
 
+set signcolumn=yes
+
 " folds
 " set foldmethod=indent
 " set foldcolumn=2
