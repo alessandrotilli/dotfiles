@@ -37,3 +37,5 @@ function check_last_exit_code() {
 NEWLINE=$'\n'
 source "$(brew --prefix)/opt/zsh-git-prompt/zshrc.sh"
 PROMPT='$(check_last_exit_code) %~%b $(git_super_status) $NEWLINE$ '
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -44,9 +44,6 @@ let g:netrw_winsize = 20
 
 let g:ale_disable_lsp = 1
 
-" Fzf
-set rtp+=/usr/local/opt/fzf
-
 " Install vim-plug if not found
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -56,6 +53,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'dyng/ctrlsf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'djoshea/vim-autoread'
