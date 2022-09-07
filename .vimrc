@@ -28,6 +28,8 @@ set shortmess=aFc
 
 set signcolumn=yes
 
+set mouse=a
+
 " folds
 " set foldmethod=indent
 " set foldcolumn=2
