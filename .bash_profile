@@ -1,6 +1,8 @@
 # suppress macos message "The default interactive shell is now zsh"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # git bash-completion (need to test on linux)
 # [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
