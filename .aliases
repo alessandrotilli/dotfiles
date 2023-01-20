@@ -17,3 +17,5 @@ if [ -z "$(type -p)" ]; then
   __git_complete gpl _git_pull
   __git_complete gps _git_push
 fi
+
+alias rgf="rg --files | rg"
