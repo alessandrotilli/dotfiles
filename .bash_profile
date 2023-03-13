@@ -12,14 +12,18 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # gitprompt brew
-if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
-  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
-  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+if [ $TERM_PROGRAM != "WarpTerminal" ]; then
+  if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+    __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+    source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+  fi
 fi
 
 # gitprompt
-if [ -r "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
-  source "$HOME/.bash-git-prompt/gitprompt.sh"
+if [ $TERM_PROGRAM != "WarpTerminal" ]; then
+  if [ -r "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    source "$HOME/.bash-git-prompt/gitprompt.sh"
+  fi
 fi
 
 # NVM
