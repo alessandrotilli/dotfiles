@@ -44,6 +44,11 @@ let g:netrw_winsize = 20
 
 let g:ale_disable_lsp = 1
 
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'javascript': ['eslint'],
+\}
+
 " Install vim-plug if not found
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -63,13 +68,14 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'tpope/vim-fugitive'
 Plug 'groenewege/vim-less'
 Plug 'ap/vim-css-color'
-Plug 'jeetsukumaran/vim-buffergator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'digitaltoad/vim-pug'
 Plug 'andymass/vim-matchup'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 " ---- colorscheme --------
 Plug 'tomasiser/vim-code-dark'
@@ -110,6 +116,8 @@ nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+nnoremap <leader>b :NvimTreeFindFileToggle<CR>
+inoremap <leader>b <Esc>:NvimTreeFindFileToggle<CR>
 " <<<<< SHORTCUTS
 
 
@@ -138,9 +146,6 @@ endfunction
 " edit and use this function to customize status bar
 " <<<<< LINTER
 " set statusline+=%{LinterStatus()}%{coc#status()}%{get(b:,'coc_current_function','')}
-
-let g:buffergator_viewport_split_policy = "B"
-let g:buffergator_hsplit_size = 10
 
 " FZF
 function! RipgrepFzf(query, fullscreen)

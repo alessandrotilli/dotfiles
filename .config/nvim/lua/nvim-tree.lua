@@ -1,11 +1,3 @@
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-source ~/.vimrc
-source ~/.config/nvim/coc.vim
-
-" lua require("lsp-config")
-" lua require("nvim-tree")
-lua << EOF
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
@@ -25,5 +17,3 @@ require("nvim-tree").setup({
     }
   }
 })
-
-EOF
