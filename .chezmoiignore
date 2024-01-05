@@ -1,0 +1,6 @@
+**/karabiner/automatic_backups/
+**/karabiner/automatic_backups/*
+**/karabiner/automatic_backups/**/*
+**/nvim/lazy-lock.json
+.DS_Store
+/**/.DS_Store

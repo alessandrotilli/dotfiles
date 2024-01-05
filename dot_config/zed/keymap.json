@@ -1,0 +1,17 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-k e": "editor::Rename",
+      "cmd-k cmd-c": "editor::ConvertToLowerCamelCase",
+      "cmd-k cmd-l": "editor::ConvertToLowerCase",
+      "cmd-k cmd-u": "editor::ConvertToUpperCase"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-k e": "project_panel::Rename"
+    }
+  }
+]
