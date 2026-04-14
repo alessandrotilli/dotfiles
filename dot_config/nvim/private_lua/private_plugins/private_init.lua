@@ -101,4 +101,12 @@ return {
       })
     end
   },
+  {
+    "cvlmtg/inline-diff.nvim",
+    version = "^1.0.0",
+    opts = {},
+    config = function()
+      require("inline-diff").setup()
+    end
+  },
 }
