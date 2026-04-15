@@ -14,5 +14,5 @@ fi
 
 [ -r ~/.bashrc.dev ] && source ~/.bashrc.dev
 [ -r ~/.secrets ] && source ~/.secrets
-. "$HOME/.cargo/env"
+
 export PATH="$HOME/.local/bin:$PATH"

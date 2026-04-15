@@ -55,7 +55,7 @@ export EDITOR=nvim
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 [ -f ~/.bashrc ] && source ~/.bashrc
-. "$HOME/.cargo/env"
+[ -f ~/.cargo/env ] && source ~/.cargo/env
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
